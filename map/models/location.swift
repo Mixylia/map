@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 struct Location:Identifiable{
-        let name:String
+    let name:String
     let cityName:String
     let coordinate:CLLocationCoordinate2D
     let description:String
