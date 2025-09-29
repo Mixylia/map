@@ -15,6 +15,7 @@
 		20A142E12E88035B0088861E /* mapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A142D92E88035B0088861E /* mapApp.swift */; };
 		20A142E22E88035B0088861E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A142D02E88035B0088861E /* Assets.xcassets */; };
 		20A142E42E88035B0088861E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A142DA2E88035B0088861E /* Preview Assets.xcassets */; };
+		20A142E62E894BA60088861E /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A142E52E894BA60088861E /* LocationListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		20A142D72E88035B0088861E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20A142D92E88035B0088861E /* mapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapApp.swift; sourceTree = "<group>"; };
 		20A142DA2E88035B0088861E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20A142E52E894BA60088861E /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				20A142D52E88035B0088861E /* LocationsView.swift */,
+				20A142E52E894BA60088861E /* LocationListView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				20A142DD2E88035B0088861E /* location.swift in Sources */,
 				20A142DE2E88035B0088861E /* LocationViewModel.swift in Sources */,
 				20A142DF2E88035B0088861E /* LocationsView.swift in Sources */,
+				20A142E62E894BA60088861E /* LocationListView.swift in Sources */,
 				20A142E02E88035B0088861E /* ContentView.swift in Sources */,
 				20A142E12E88035B0088861E /* mapApp.swift in Sources */,
 			);

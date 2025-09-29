@@ -22,8 +22,12 @@ ZStack {
     Map(position:$mapRegion)
         .ignoresSafeArea()
     VStack (spacing: 0){
-        Text(vm.mapLocation.name  + vm.mapLocation.cityName)
+        header
+         .padding()
+         
+        Spacer()
     }
+ 
 }
 }
 }
@@ -31,4 +35,40 @@ ZStack {
 #Preview {
     LocationsView()
         .environmentObject(LocationsViewModel())
+}
+extension LocationsView {
+    private var header:some View {
+        VStack {
+            Button(action: viewModel.togglelocationList) {
+                
+                    Text(viewModel.mapLocation.name + "  " + viewModel.mapLocation.cityName)
+                        .font(.title2)
+                        .fontWeight(.black)
+                        .foregroundColor(.primary)
+                        .frame( height: 55)
+                        .frame(maxWidth: .infinity)
+                        .overlay(alignment: .leading) {
+                            Image(systemName: "arrow.down")
+                                .font(.headline)
+                                .foregroundColor(.primary)
+                                .padding()
+                        }
+                
+               
+                
+            }
+            if viewModel.showListLocation {
+                LocationListView()
+                    
+            }
+            
+            
+            
+        }
+        .background(.thickMaterial)
+        .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.3), radius: 20 , x:0, y:15)
+        
+    }
+    
 }
