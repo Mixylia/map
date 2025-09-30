@@ -12,14 +12,11 @@ struct LocationsView: View {
 
 @EnvironmentObject var viewModel: LocationsViewModel
 
-@State private var mapRegion = MapCameraPosition.region(MKCoordinateRegion(
-    center: CLLocationCoordinate2DMake(41.8902, 12.4922),
-span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-))
+
 
 var body: some View {
 ZStack {
-    Map(position:$mapRegion)
+    Map(coordinateRegion: $viewModel.mapRegion)
         .ignoresSafeArea()
     VStack (spacing: 0){
         header
@@ -52,6 +49,8 @@ extension LocationsView {
                                 .font(.headline)
                                 .foregroundColor(.primary)
                                 .padding()
+                                .rotationEffect(Angle(degrees:
+                                                        viewModel.showListLocation ? 180 : 0))
                         }
                 
                
@@ -72,3 +71,6 @@ extension LocationsView {
     }
     
 }
+
+
+

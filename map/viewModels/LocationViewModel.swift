@@ -12,7 +12,7 @@ class LocationsViewModel: ObservableObject {
     @Published var locations: [Location] = []
     //текущая локация на карте
     @Published var mapLocation: Location {
-    didSet {
+        didSet {
             updateMapRegion(location: mapLocation)
         }
     }
@@ -37,5 +37,12 @@ class LocationsViewModel: ObservableObject {
         withAnimation(.easeInOut) {
             showListLocation = !showListLocation
         }
+    }
+    func showNextLocation(location:Location){
+        withAnimation(.easeInOut){
+            mapLocation = location
+            showListLocation = false
+        }
+        
     }
 }
