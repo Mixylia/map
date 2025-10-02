@@ -45,4 +45,23 @@ class LocationsViewModel: ObservableObject {
         }
         
     }
+    func nextButtonPressed() {
+        guard let currentIndex = locations.firstIndex(where: { $0 == mapLocation }) else {
+            print("не удалось найти текущий индекс в массиве местоположений")
+            return
+        }
+        
+        let nextIndex = currentIndex + 1
+        
+        guard locations.indices.contains(nextIndex) else {
+            // Если достигли конца массива, переходим к первому элементу
+            guard let firstLocation = locations.first else { return }
+            showNextLocation(location: firstLocation)
+            return
+        }
+        
+        // Переходим к следующей локации
+        let nextLocation = locations[nextIndex]
+        showNextLocation(location: nextLocation)
+    }
 }

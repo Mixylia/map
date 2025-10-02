@@ -20,11 +20,19 @@ ZStack {
         .ignoresSafeArea()
     VStack (spacing: 0){
         header
-         .padding()
-         
+            .padding()
+        
         Spacer()
+        ZStack {
+            ForEach(viewModel.locations) {location in
+                if viewModel.mapLocation.id == location.id {
+                    LocationPreviewView(location: location)
+                    
+                }
+                
+            }
+        }
     }
- 
 }
 }
 }
